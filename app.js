@@ -17,13 +17,13 @@ console.log(lamp)
 window.addEventListener('scroll', function(){
     let scroll = window.pageYOffset
     console.log("Here scroll",scroll);
-    calcul = scroll - 150
-    let topBackZero = -180
+    calcul = scroll - 300
+    let topBackZero = -400
     console.log("Here calcul ",calcul);
     if (scroll > 50){
         console.log('Is Big');
         lamp.style.top = `${calcul}px`;
-    } else if (scroll < 130) {
+    } else if (scroll < 110) {
         lamp.style.top = `${topBackZero}px`; 
         console.log('Is Less', topBackZero);
     }
@@ -41,9 +41,9 @@ window.addEventListener('scroll', function(){
     }
 
     // Check to translate it left
-    if (scroll > 380){
-        lamp.style.top = `200px`;
-        lamp.style.transform = `translateX(-2000%)`;
-    }
+    //if (scroll > 380){
+    //    lamp.style.top = `200px`;
+    //    lamp.style.transform = `translateX(-2000%)`;
+    //}
 
 });

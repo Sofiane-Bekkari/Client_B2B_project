@@ -96,7 +96,7 @@ li.item a {
     rgba(122, 145, 246, 0.452),
     rgba(146, 162, 251, 0.602),
     rgba(142, 168, 255, 0.5)),
-    url(/images/PAGE-02.png) no-repeat center center;
+    url(/images/WEBSITE-B2B-HOME-BG.jpg) no-repeat center center;
     background-size: cover;
     width: 100%;
     text-align: center;
@@ -114,9 +114,9 @@ li.item a {
 
 /* lamp grey */
 .light-lamp {
-    position: fixed;
+    position: absolute;
     width: 100px;
-    top: -180px;
+    top: -400px;
     right: 3px;
     z-index: 0;
     transition: all .5s ease-in, transform 1s ease-in-out;
@@ -183,7 +183,68 @@ button a:hover {
     margin: 0 auto;
     width: 90%;
 }
+/** End of Showcase **/
 
+/* all images */
+img {
+    display: block;
+}
+
+/* Dark Section */
+.dark-section {
+    background:
+    url(/images/WEBSITE-B2B-HOME-02.jpg) no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    text-align: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: -9;
+}
+.container.dark {
+    border: solid rebeccapurple;
+    display: flex;
+    justify-content: space-around;
+    height: 60vh;
+    margin-top: 5rem;
+    align-items: flex-end;
+}
+/* block pic */
+.block-pic {
+    border: solid teal;
+    width: 100%;
+}
+/* telephone dark */
+.block-pic img {
+    width: 100px;
+}
+img.table {
+    width: 150px;
+    height: 25vh;
+}
+img.telephone {
+    width: 120px;
+    height: 20vh;
+}
+img.cameleon {
+    margin-left: 5rem;
+}
+/* Dark lamp */
+.lamp-dark {
+    position: absolute;
+    width: 100px;
+    top: -90px;
+    right: 10px;
+    z-index: 0;
+    transition: all .5s ease-in, transform 1s ease-in-out;
+}
+img.lamp-dark {
+    display: block;
+    width: 80px;
+}
 /* Light effect */
 .lighter {
     position: relative;
