@@ -100,7 +100,6 @@ li.item a {
     background-size: cover;
     width: 100%;
     text-align: center;
-    background-color: #363636;
     height: 80vh;
     display: flex;
     justify-content: center;
@@ -120,6 +119,7 @@ li.item a {
     top: -180px;
     right: 3px;
     z-index: 0;
+    transition: all .5s ease-in, transform 1s ease-in-out;
 }
 img.lamp-grey {
     display: block;
@@ -169,7 +169,6 @@ button:hover {
 }
 button a:hover {
     color: #0e3742;
-
 }
 
 /* desktop */
@@ -212,6 +211,20 @@ button a:hover {
         0 0 80px #03bcf4,
         0 0 160px #03bcf4;   
     }
+}
+/* Footer */
+footer {
+    border: solid;
+    height: 20vh;
+    background-color: #001D2F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-content {
+    text-align: center;
+    color: #fff;
+    font-size: 1.5rem;
 }
 
 
