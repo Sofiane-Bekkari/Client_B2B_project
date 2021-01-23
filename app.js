@@ -41,9 +41,18 @@ window.addEventListener('scroll', function(){
         
     }
     // IF it more 350 scroll it back
-    if (scroll > 320 & width > 900 ) {
+    if (scroll > 320 & width < 1200 ) {
         lamp.style.top = `${topBackZero}px`; 
-        console.log('Do this!!!')
+        console.log('Do this!')
+    }
+    if (scroll > 300 & width > 1200){
+        lamp.style.top = `${topBackZero}px`
+        //lamp.style.tranform = `opacity 0.9`
+        console.log("IS ON 1200PX!!")
+    }
+    if (scroll < 100 & width > 1200){
+        lamp.style.top = `${topBackZero}px`
+        console.log("IS ON BACK 1200PX!!")
     }
 
 });

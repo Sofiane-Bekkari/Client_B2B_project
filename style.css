@@ -20,18 +20,26 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    align-items: center;
     padding: 1rem 0;
     z-index: 9;  
+}
+/* head icons fixed */
+.head-logo {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0;
 }
 /* logo */
 #logo .logo {
     margin-left: 1rem;
     width: 200px;
-
 }
 .berger {
     margin-right: 1rem;
     text-align: center;
+    padding: .5rem;
     font-size: 1.5rem;
     display: block;
     color: #2D4554;
@@ -442,12 +450,13 @@ footer {
 @media screen and (min-width: 900px){
 
     /* nav */
-    .berger {
-        margin-right: 5rem;
+    .head-logo {
+        width: 90%;
+        margin: 0 auto;
+        justify-content: space-between;
     }
     #logo .logo {
         width: 220px;
-        margin-left: 5rem;
     }
     /* lamp grey */
     .light-lamp {
@@ -558,8 +567,8 @@ footer {
         width: 60%;
         margin: 0 auto;
     }
-     /* lamp on */
-     .lamp-on img {
+    /* lamp on */
+    .lamp-on img {
         top: -4px;
         right: 110px;
         width: 81px;
@@ -594,23 +603,30 @@ footer {
 /* media query at 1200px */
 @media screen and (min-width: 1200px) {
 
+    /* head-icon */
+    .head-logo {
+        width: 90%;
+        margin: 0 auto;
+    }
     /* showcase */
     .showcase {
-        height: 100vh;
+        height: 90vh;
     }
     /* container */
     .container.hero {
         width: 85%;
         padding: 0;
         margin: 2rem 0 0 0;
-        border: solid purple;
-        height: 80vh;
+        height: 70vh;
         justify-content: center;
         align-items: flex-end;
     }
+    /* lamp grey */
+    .light-lamp {
+        top: -360px;
+    }
     .main-text {
-        border: solid red;
-        margin-bottom: 10rem;
+        margin-bottom: 6rem;
         padding: 0;
     }
     .main-text h1 {
@@ -622,40 +638,191 @@ footer {
     }
     .main-text p {
         font-size: 1.1rem;
-        line-height: 1.5rem;
+        line-height: 1.6rem;
         letter-spacing: .5px;
     }
     .desktop-img { 
-       border: solid yellow;
        padding: 0;
        margin: 0;
     }
     .desk {
         height: 40vh;
+        width: 550px;
+    }
+    /*DARK SECTION*/
+    .dark-section {
+        height: 85vh;
+    }
+    .container.all {
+      height: 85vh;
+      width: 85%;
+    }
+    /* block pic */
+    .block-pic {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    /* dark pics */
+    .block-pic .table {
+        width: 250px;
+        padding-top: 2rem ;
+    }
+    img.table {
+        margin-top: 3rem;
+        height: 33vh;
+    }
+    img.telephone {
+        height: 22vh;
+        width: 130px;
+    }
+    img.cameleon {
+        width: 120px;
+        margin-left: 15rem;
+    }
+    /* lamp on */
+    .lamp-on img {
+     top: -4px;
+     right: 160px;
+     width: 81px;
+    }
+    /* Light effect */
+    .lighter {
+        top: 380px;
+        right: 162px;
+    }
+    .spot-light {
+        right: 98px;
+        top: 310px;
+    }
+    img.spot {
+        height: 59vh;
+        width: 210px;
+    }
+    .lamp-dark {
+        top: -20px;
+        right: 60px;
+    }
+
+    /* SHADOW */
+    .lamp-shadow {
+        bottom: 1px;
+        right: -0px;
+        height: 35vh;
+    }
+}
+
+/* media query at 1400px */
+@media screen and (min-width: 1400px) {
+
+    .head-logo {
+        width: 1240px;
+    }
+    /* showcase */
+    .showcase {
+        height: 100vh;
+    }
+    /* container */
+    .container.hero {
+      width: 1199px;
+      height: 80vh;
+    }
+    .main-text {
+      margin-bottom: 8rem;
+
+    }
+    .desk {
+      height: 40vh;
+    }
+    /*DARK SECTION*/
+    .dark-section {
+        height: 85vh;
+    }
+    .container.all {
+      height: 85vh;
+      width: 1200px;
+    }
+    /* block pic */
+    .block-pic {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    /* dark pics */
+    .block-pic .table {
+        width: 280px;
+        padding-top: 1rem ;
+        margin: 0 auto;
+    }
+    img.table {
+        margin-top: 3rem;
+        height: 33vh;
+    }
+    img.telephone {
+        height: 22vh;
+        width: 130px;
+    }
+    img.cameleon {
+        width: 120px;
+        margin-left: 18rem;
     }
 }
 
 /* media query at 1600px */
 @media screen and (min-width: 1600px) {
 
-
-    /* container */
-    .container {
-      width: 1200px;
-      border: solid;
-      height: 100vh;
+    .container.hero {
+        height: 85vh;
     }
-    .main-text {
-      border: solid purple;
-      margin-top: 23rem;
-
-
+    .dark-section {
+        height: 95vh;
     }
-    .desktop-img { 
-     border: solid yellow;
-     margin-top: 23rem;
+    .container.all {
+        height: 95vh;
+        padding: 0;
+        margin: 0;
     }
-    .desk {
-      height: 40vh;
+     /* block pic */
+     .block-pic {
+
+         margin-top: 3rem;
+         width: 100%;
+    }
+    .lighting {
+        padding: 0;
+        margin: 0;
+       
+    }
+    img.table {
+        margin-top: 3rem;
+        height: 33vh;
+    }
+    img.telephone {
+        height: 22vh;
+        width: 150px;
+    }
+    img.cameleon {
+        width: 120px;
+        margin-left: 18rem;
+    }
+    .light-text {
+        margin-top: 18rem;
+    }
+    img.spot {
+        height: 70vh;
+        width: 230px;
+    }
+    .lamp-dark {
+        top: 0px;
+        right: 65px;
+    }
+    .spot-light {
+        right: 88px;
+        top: 310px;
+    }
+
+    /* SHADOW */
+    .lamp-shadow {
+        bottom: 1px;
+        right: -0px;
+        height: 35vh;
     }
 }
