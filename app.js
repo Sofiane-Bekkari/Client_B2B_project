@@ -11,39 +11,39 @@ berger.addEventListener('click', function(){
 
 ///**** lamp light ****/// 
 let lamp = document.querySelector('.light-lamp');
+const showcaseWidth = document.querySelector('.showcase');
 
-console.log(lamp)
 
+// Event on Scroll
 window.addEventListener('scroll', function(){
     let scroll = window.pageYOffset
-    console.log("Here scroll",scroll);
+    let width = showcaseWidth.offsetWidth
+  
     calcul = scroll - 300
     let topBackZero = -400
-    console.log("Here calcul ",calcul);
-    if (scroll > 50){
-        console.log('Is Big');
+  
+    if (scroll > 50 & width < 900){
         lamp.style.top = `${calcul}px`;
-    } else if (scroll < 110) {
+
+    } else if (scroll < 100 & width < 900) {
         lamp.style.top = `${topBackZero}px`; 
-        console.log('Is Less', topBackZero);
+
+    }
+    // if it greater then 300
+    if (scroll > 300 & width < 900 ) {
+        lamp.style.top = `-10px`; 
     }
 
-    // Check if it gearter to fix it
-    if  (scroll > 350) {
-        lamp.style.top = `10px`;
-        lamp.style.opacity = 0.5;
-        console.log('yes is greater')
+    // Check if it on more then 900PX
+    if  (scroll > 100 & width > 900) {
+        lamp.style.top = `${calcul}px`;
+        console.log('yes is greater on 900PX')
         
-    } else {
-
-        lamp.style.opacity = 0.9;
-        lamp.style.transform = `translateX(0)`;
     }
-
-    // Check to translate it left
-    //if (scroll > 380){
-    //    lamp.style.top = `200px`;
-    //    lamp.style.transform = `translateX(-2000%)`;
-    //}
+    // IF it more 350 scroll it back
+    if (scroll > 320 & width > 900 ) {
+        lamp.style.top = `${topBackZero}px`; 
+        console.log('Do this!!!')
+    }
 
 });
