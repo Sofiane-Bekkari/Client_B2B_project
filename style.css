@@ -393,6 +393,26 @@ footer {
     font-size: 1.5rem;
 }
 
+/*********COMING SOON***********/
+
+.container.coming-next {
+    height: 40vh;
+}
+.coming-next {
+    border: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    background-color: black;
+}
+.coming-next h1 {
+    font-size: 3rem;
+    letter-spacing: 3px;
+    color: #FFFF00;
+}
+
 
 
 /* Media query larger screen at 740px */
@@ -559,6 +579,9 @@ footer {
         padding: 0;
         margin: 15rem 0 0 0;
         text-align: left;
+    }
+    .light-text p {
+        padding: 0 8rem 0 0;
     }
     span.idea img {
         width: 40px;
@@ -735,10 +758,10 @@ footer {
     }
     /*DARK SECTION*/
     .dark-section {
-        height: 85vh;
+        height: 90vh;
     }
     .container.all {
-      height: 85vh;
+      height: 90vh;
       width: 1200px;
     }
     /* block pic */
