@@ -190,13 +190,14 @@ button a:hover {
 .desktop-img {
     margin: 0 auto;
     padding-top: 2rem;
-    width: 80%;
+    width: 100%;
     text-align: center;
 }
 .desk {
     display: block;
     margin: 0 auto;
-    width: 90%;
+    padding-left: 1.5rem;
+    width: 80%;
 }
 /** End of Showcase **/
 
@@ -239,11 +240,10 @@ img {
 }
 img.table {
     width: 180px;
-    height: 30vh;
 }
 img.telephone {
     width: 120px;
-    height: 20vh;
+
     margin-bottom: 2rem;
 }
 img.cameleon {
@@ -520,20 +520,20 @@ footer {
         margin-top: 15rem;
     }
     .main-text h1 {
-        font-size: 2.1rem;
+        font-size: 2rem;
     }
     .main-text p {
+
         padding: 1rem 0;
         line-height: 1.3rem;
     }
     .desktop-img { 
         width: 100%;
-        margin-top: 15rem;
+        margin-top: 17rem;
     }
     .desk {
         margin-top: 8rem;
-        width: 100%;
-        height: 35vh;
+        width: 520px;
     }
     /*DARK SECTION*/
     .container.all {
@@ -551,12 +551,8 @@ footer {
         padding: 0;
         width: 220px;
     }
-    img.table {
-        height: 32vh;
-    }
     img.telephone {
-        height: 22vh;
-        width: 120px;
+        width: 130px;
         margin-bottom: 2rem;
     }
     img.cameleon {
@@ -669,8 +665,8 @@ footer {
        margin: 0;
     }
     .desk {
-        height: 40vh;
-        width: 550px;
+        width: 600px;
+        margin-bottom: 2rem;
     }
     /*DARK SECTION*/
     .dark-section {
@@ -695,7 +691,6 @@ footer {
         height: 33vh;
     }
     img.telephone {
-        height: 22vh;
         width: 130px;
     }
     img.cameleon {
@@ -742,7 +737,7 @@ footer {
     }
     /* showcase */
     .showcase {
-        height: 100vh;
+        height: 90vh;
     }
     /* container */
     .container.hero {
@@ -752,9 +747,6 @@ footer {
     .main-text {
       margin-bottom: 8rem;
 
-    }
-    .desk {
-      height: 40vh;
     }
     /*DARK SECTION*/
     .dark-section {
@@ -780,7 +772,6 @@ footer {
         height: 33vh;
     }
     img.telephone {
-        height: 22vh;
         width: 130px;
     }
     img.cameleon {
@@ -792,8 +783,12 @@ footer {
 /* media query at 1600px */
 @media screen and (min-width: 1600px) {
 
+    .showcase {
+        height: 100vh;
+    }
+
     .container.hero {
-        height: 85vh;
+        height: 90vh;
     }
     .dark-section {
         height: 95vh;
