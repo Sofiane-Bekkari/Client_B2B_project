@@ -24,13 +24,18 @@ window.addEventListener('scroll', function(){
     let width = showcaseWidth.offsetWidth
   
     let calcul = scroll - 300
-    
+    if (width < 900 ){
+        console.log('NOTHGIN TO DO!!')
+        return
+
+    }
     // Scrolling the grey lamp
     if (scroll > 50 & width > 900){
         lamp.style.top = `${calcul - 200}px`;
         console.log('First!', calcul,'Scroll=', scroll)
     } else {
         lamp.style.top = `${calcul - 150}px`;
+        console.log('First!', calcul,'Scroll=', scroll)
     }
     // Change to the dark lamp 
         

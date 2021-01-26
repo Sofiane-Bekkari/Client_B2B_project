@@ -309,8 +309,8 @@ span.idea img {
 /* SHADOW */
 .lamp-shadow {
     position: absolute;
-    bottom: -5px;
-    right: 500px;
+    bottom: 0px;
+    right: 5px;
     height: 35vh;
     width: 400px;
     opacity: 0.4;
@@ -347,6 +347,7 @@ img.lamp-shadow {
     right: -23px;
     top: 285px;
     opacity: 0.3;
+    display: none;
     animation: spot 5s linear;
 }
 img.spot {
@@ -631,12 +632,12 @@ footer {
         right: 112px;
     }
     .spot-light {
-        right: 32px;
-        top: 230px;
+        right: 37px;
+        top: 240px;
     }
     img.spot {
         height: 55vh;
-        width: 210px;
+        width: 200px;
     }
     .lamp-dark {
         top: -20px;
