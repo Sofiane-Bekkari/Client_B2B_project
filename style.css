@@ -257,13 +257,14 @@ img.cameleon {
 .lamp-dark {
     position: absolute;
     width: 100px;
-    top: -110px;
+    top: -10px;
     right: 35px;
     z-index: 9;
     transition: all .5s ease-in, transform 1s ease-in-out;
 }
 img.lamp-dark {
     display: block;
+    border: solid rebeccapurple;
     width: 80px;
 }
 /** End Dark Section **/
