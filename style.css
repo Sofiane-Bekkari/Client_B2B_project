@@ -22,7 +22,7 @@ header {
     align-items: center;
     align-items: center;
     padding: 1rem 0;
-    z-index: 9;  
+    z-index: 99999;  
 }
 /* head icons fixed */
 .head-logo {
@@ -30,6 +30,7 @@ header {
     width: 100%;
     justify-content: space-between;
     margin: 0;
+    z-index: 99999;
 }
 /* logo */
 #logo .logo {
@@ -58,10 +59,9 @@ nav {
     transition: all .5s;
     height: 50vh;
     opacity: 0.10;
-    z-index: -1;
+    z-index: 999;
 }
 .nav-bar {
-    border: red;
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -108,20 +108,22 @@ li.item a {
     rgba(122, 145, 246, 0.452),
     rgba(146, 162, 251, 0.602),
     rgba(142, 168, 255, 0.5)),
-    url(/images/WEBSITE-B2B-HOME-BG.jpg) no-repeat center center;
+    url(/images/bgn-showcase-1.png) no-repeat center center;
     background-size: cover;
     width: 100%;
+    position: relative;
     text-align: center;
-    height: 80vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: -9;
+    z-index: 99;
 }
 /* Sections container */
-.container {
-    width: 90%;
+.container.hero {
+    width: 100%;
     position: relative;
+    z-index: 99;
 }
 
 /* lamp grey */
@@ -136,17 +138,18 @@ li.item a {
 img.lamp-grey {
     display: block;
     width: 80px;
+   
 }
 /* main text */
 .main-text {
-    padding-top: 5rem;
+    padding-top: 3rem;
 }
 .main-text h1 {
     letter-spacing: 2px;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 .main-text h3 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: lighter;
     letter-spacing: 1px;
 }
@@ -154,7 +157,9 @@ span.txt-color {
     color: #009EE0;
 }
 .main-text p {
+    font-size: .9rem;
     padding: 1rem 2rem;
+    line-height: 1.5rem;
 
 }
 /* button */
@@ -172,7 +177,7 @@ button {
 button a {
     text-decoration: none;
     display: block;
-    padding: 1rem;
+    padding: .5rem 1rem;
     text-transform: uppercase;
     color: #fff;
     font-weight: bold;
@@ -189,9 +194,8 @@ button a:hover {
 /* desktop */
 .desktop-img {
     margin: 0 auto;
-    padding-top: 2rem;
+    padding-top: 5rem;
     width: 100%;
-    text-align: center;
 }
 .desk {
     display: block;
@@ -209,11 +213,11 @@ img {
 /* Dark Section */
 .dark-section {
     background:
-    url(/images/WEBSITE-B2B-HOME-02.jpg) no-repeat center center;
+    url(/images/bgn-dark-1.png) no-repeat center center;
     background-size: cover;
     width: 100%;
     text-align: center;
-    height: 80vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -243,7 +247,6 @@ img.table {
 }
 img.telephone {
     width: 120px;
-
     margin-bottom: 2rem;
 }
 img.cameleon {
@@ -254,9 +257,9 @@ img.cameleon {
 .lamp-dark {
     position: absolute;
     width: 100px;
-    top: -44px;
+    top: -110px;
     right: 35px;
-    z-index: 1;
+    z-index: 9;
     transition: all .5s ease-in, transform 1s ease-in-out;
 }
 img.lamp-dark {
@@ -307,20 +310,25 @@ span.idea img {
 .lamp-shadow {
     position: absolute;
     bottom: -5px;
-    right: -65px;
+    right: 500px;
     height: 35vh;
     width: 400px;
-    opacity: 0.5;
-    animation: shadow 5s linear infinite;
+    opacity: 0.4;
+    animation: shadow 5s linear;
+}
+img.lamp-shadow {
+    right: -40px;
 }
 
 /* Light effect */
 .lighter {
     position: absolute;
+    display: none;
     z-index: 1;
     font-size: 10rem;
-    top: 51%;
-    right: 36px;
+    top: 510px;
+    right: 68px;
+    transition: all 1s ease-in-out;
     color: #0e3742;
     -webkit-box-reflect: below 1px linear-gradient(transparent,#0004);
     line-height: 0.1em;
@@ -333,10 +341,26 @@ span.idea img {
     letter-spacing: -41px;
     transform: rotateZ(180deg);
 }
-/** KEYFRAMES **/
+/*** TEST LIGHT SECTION ***/
+.spot-light {
+    position: absolute;
+    right: -23px;
+    top: 285px;
+    opacity: 0.3;
+    animation: spot 5s linear;
+}
+img.spot {
+    height: 52vh;
+    width: 200px;
+}
+
+/** KEYFRAMES /SHADOW/ /SPOT/ /light/ **/
 @keyframes shadow {
     0%{
-        opacity: 0.2;
+        opacity: 0;
+    }
+    20%{
+        opacity: 0.1;
     }
     100% {
         opacity: 0.4;
@@ -344,6 +368,12 @@ span.idea img {
 }
 @keyframes spot {
     0%{
+        opacity: 0;
+    }
+    10% {
+        opacity: 0;
+    }
+    20% {
         opacity: 0.1;
     }
     100% {
@@ -365,18 +395,6 @@ span.idea img {
         0 0 80px #03bcf4,
         0 0 160px #03bcf4;   
     }
-}
-/*** TEST LIGHT SECTION ***/
-.spot-light {
-    position: absolute;
-    right: -23px;
-    top: 285px;
-    opacity: 0.3;
-    animation: spot 5s linear infinite;
-}
-img.spot {
-    height: 52vh;
-    width: 200px;
 }
 
 /* Footer */
@@ -481,7 +499,7 @@ footer {
     /* lamp grey */
     .light-lamp {
       right: 100px;
-      top: -250px;
+      top: -450px;
     }
     /* lamp on */
     .lamp-on img {
@@ -504,43 +522,62 @@ footer {
     }
     /* showcase */
     .showcase {
-        height: 80vh;
+        height: 100vh;
     }
     /* container */
     .container.hero {
-        display: grid;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
         width: 90%;
-        height: 90vh;
-        grid-template-columns: 1fr 1fr;
+        height: 55vh;
     }
     .main-text {
         width: 100%;
         padding-left: 2rem ;
         text-align: left;
-        margin-top: 15rem;
+        margin-bottom: 5rem;
     }
     .main-text h1 {
         font-size: 2rem;
     }
     .main-text p {
-
         padding: 1rem 0;
         line-height: 1.3rem;
     }
     .desktop-img { 
         width: 100%;
-        margin-top: 17rem;
     }
     .desk {
-        margin-top: 8rem;
         width: 520px;
     }
     /*DARK SECTION*/
+    .dark-section {
+        height: 100vh;
+    }
     .container.all {
         height: 80vh;
         width: 85%;
+        position: relative;
     }
     /* block pic */
+    .dark {
+        height: 80vh;
+    }
+    .light-text h1 {
+        font-size: 1.7rem;
+    }
+    .light-text h3 {
+        font-size: 1.3rem;
+    }
+    .light-text p {
+        font-size: .9rem;
+    }
+    .light-text {
+        position: absolute;
+        top: 45px ;
+        width: 20%;
+    }
     .block-pic {
         width: 100%;
         margin-bottom: 2rem;
@@ -562,13 +599,9 @@ footer {
         margin-bottom: 2rem;
     }
     /* Dark lamp */
-    .lamp-dark {
-        position: absolute;
-        width: 100px;
-        top: -44px;
+    img.lamp-dark {
+        top: -160px;
         right: 35px;
-        z-index: 1;
-        transition: all .5s ease-in, transform 1s ease-in-out;
     }
     .light-text {
         width: 100%;
@@ -598,11 +631,11 @@ footer {
         right: 112px;
     }
     .spot-light {
-        right: 48px;
-        top: 310px;
+        right: 32px;
+        top: 230px;
     }
     img.spot {
-        height: 52vh;
+        height: 55vh;
         width: 210px;
     }
     .lamp-dark {
@@ -629,7 +662,7 @@ footer {
     }
     /* showcase */
     .showcase {
-        height: 90vh;
+        height: 100vh;
     }
     /* container */
     .container.hero {
@@ -643,6 +676,7 @@ footer {
     /* lamp grey */
     .light-lamp {
         top: -360px;
+        right: 135px;
     }
     .main-text {
         margin-bottom: 6rem;
@@ -650,13 +684,13 @@ footer {
     }
     .main-text h1 {
         font-weight: bold;
-        font-size: 2.5rem;
+        font-size: 2.1rem;
     }
     .main-text h3 {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
     .main-text p {
-        font-size: 1.1rem;
+        font-size: 1rem;
         line-height: 1.6rem;
         letter-spacing: .5px;
     }
@@ -670,11 +704,14 @@ footer {
     }
     /*DARK SECTION*/
     .dark-section {
-        height: 85vh;
+        height: 100vh;
     }
     .container.all {
-      height: 85vh;
+      height: 90vh;
       width: 85%;
+    }
+    .dark {
+        height: 90vh;
     }
     /* block pic */
     .block-pic {
@@ -716,11 +753,10 @@ footer {
         height: 59vh;
         width: 210px;
     }
-    .lamp-dark {
-        top: -20px;
-        right: 60px;
+    img.lamp-dark {
+        top: 10px;
+        right: 100px;
     }
-
     /* SHADOW */
     .lamp-shadow {
         bottom: 1px;
@@ -814,7 +850,6 @@ footer {
         height: 33vh;
     }
     img.telephone {
-        height: 22vh;
         width: 150px;
     }
     img.cameleon {
