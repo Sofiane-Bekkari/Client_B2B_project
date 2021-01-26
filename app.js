@@ -51,6 +51,12 @@ window.addEventListener('scroll', function(){
         timeLightingTwo();
     }
 
+    // Cheching light on 1400px 
+    if (width > 1400){
+        timeLightingThree();
+    }
+
+
   
 
     //}
@@ -134,3 +140,21 @@ function timeLightingTwo(){
         console.log('BACK ON LIGHT 1200px!');
     }
 }
+/// 1400px 
+function timeLightingThree(){
+
+        let scroll = window.pageYOffset
+        let width = showcaseWidth.offsetWidth
+        let calcul = scroll - 300
+    
+        if (scroll >= 1850 & width > 1399) {
+            lampDark.style.top = `1000px`
+            lightTime.style.transform = `block`;
+            lightTime.style.display = `block`;
+            console.log('LIGHT IS ON 1400px!');
+        } else {
+            lightTime.style.display = `none`;
+            lampDark.style.top = `${calcul -650}px`;
+            console.log('BACK ON LIGHT 1400px!');
+        }
+} 

@@ -773,7 +773,7 @@ footer {
     }
     /* showcase */
     .showcase {
-        height: 90vh;
+        height: 100vh;
     }
     /* container */
     .container.hero {
@@ -786,7 +786,7 @@ footer {
     }
     /*DARK SECTION*/
     .dark-section {
-        height: 90vh;
+        height: 100vh;
     }
     .container.all {
       height: 90vh;
@@ -819,15 +819,18 @@ footer {
 /* media query at 1600px */
 @media screen and (min-width: 1600px) {
 
+    img.lamp-grey {
+        top: -150px;
+    }
     .showcase {
         height: 100vh;
     }
 
     .container.hero {
-        height: 90vh;
+        height: 80vh;
     }
     .dark-section {
-        height: 95vh;
+        height: 100vh;
     }
     .container.all {
         height: 95vh;
@@ -868,14 +871,17 @@ footer {
         right: 65px;
     }
     .spot-light {
-        right: 88px;
-        top: 310px;
+        right: 90px;
+        top: 290px;
+    }
+    img.spot {
+        height: 65vh;
     }
 
     /* SHADOW */
     .lamp-shadow {
-        bottom: 1px;
-        right: -0px;
+        bottom: 40px;
+        right: 40px;
         height: 35vh;
     }
 }
