@@ -130,15 +130,15 @@ li.item a {
 .light-lamp {
     position: absolute;
     width: 100px;
-    top: -400px;
+    top: -350px;
     right: 3px;
     z-index: 0;
     transition: all .5s ease-in, transform 1s ease-in-out;
 }
 img.lamp-grey {
     display: block;
-    width: 80px;
-   
+    width: 70px;
+    top: 150px;
 }
 /* main text */
 .main-text {
@@ -259,13 +259,19 @@ img.cameleon {
     width: 100px;
     top: -10px;
     right: 35px;
-    z-index: 9;
+    z-index: 0;
     transition: all .5s ease-in, transform 1s ease-in-out;
 }
-img.lamp-dark {
+img.lamp-dark{
     display: block;
-    border: solid rebeccapurple;
+    top: -800px;
     width: 80px;
+}
+img.lamp-dark-2 {
+    width: 80px;
+    position: absolute;
+    z-index: 0;
+    top: -10px;
 }
 /** End Dark Section **/
 
@@ -274,6 +280,7 @@ img.lamp-dark {
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    z-index: 99;
 }
 .light-text {
     z-index: 99;
@@ -318,7 +325,8 @@ span.idea img {
     animation: shadow 5s linear;
 }
 img.lamp-shadow {
-    right: -40px;
+    right: 0px;
+    display: none;
 }
 
 /* Light effect */
@@ -413,29 +421,9 @@ footer {
     font-size: 1.5rem;
 }
 
-/*********COMING SOON***********/
-
-.container.coming-next {
-    height: 40vh;
-}
-.coming-next {
-    border: solid;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    text-align: center;
-    background-color: black;
-}
-.coming-next h1 {
-    font-size: 3rem;
-    letter-spacing: 3px;
-    color: #FFFF00;
-}
 
 
-
-/* Media query larger screen at 740px */
+/** Media query larger screen at 740px **/
 @media screen and (min-width: 740px){
     
     /* lamp grey */
@@ -486,7 +474,7 @@ footer {
 }
 
 
-/* Media query larger screen at 900px */
+/** Media query larger screen at 900px **/
 @media screen and (min-width: 900px){
 
     /* nav */
@@ -604,6 +592,9 @@ footer {
     img.lamp-dark {
         top: -160px;
         right: 35px;
+    }
+    img.lamp-dark-2 {
+        display: none;
     }
     .light-text {
         width: 100%;
@@ -886,4 +877,12 @@ footer {
         right: 40px;
         height: 35vh;
     }
+}
+
+/***Media query ON Super large 2500px***/
+@media screen and (min-width: 2500px){
+   .container.hero {
+       border: solid rebeccapurple;
+       height: 65vh;
+   }
 }

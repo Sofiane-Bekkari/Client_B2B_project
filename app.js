@@ -10,6 +10,7 @@ berger.addEventListener('click', function(){
 
 
 ///**** lamp light ****/// 
+
 let lamp = document.querySelector('.light-lamp');
 const showcaseWidth = document.querySelector('.showcase');
 const lampDark = document.querySelector('.lamp-dark');
@@ -60,39 +61,14 @@ window.addEventListener('scroll', function(){
     if (width > 1400){
         timeLightingThree();
     }
+    // 2500px
+    if (width > 2500){
+        timeLightingSuperLarge();
+    }
 
-
-  
-
-    //}
-    //// if it greater then 300
-    //if (scroll > 300 & width < 900 ) {
-    //    lamp.style.top = `-10px`; 
-    //}
-//
-    //// Check if it on more then 900PX
-    //if  (scroll > 100 & width > 900) {
-    //    lamp.style.top = `${calcul}px`;
-    //    console.log('yes is greater on 900PX')
-    //    
-    //}
-    //// IF it more 350 scroll it back
-    //if (scroll > 320 & width < 1200 ) {
-    //    lamp.style.top = `${topBackZero}px`; 
-    //    console.log('Do this!')
-    //}
-    //if (scroll > 300 & width > 1200){
-    //    lamp.style.top = `${topBackZero}px`
-    //    //lamp.style.tranform = `opacity 0.9`
-    //    console.log("IS ON 1200PX!!")
-    //}
-    //if (scroll < 100 & width > 1200){
-    //    lamp.style.top = `${topBackZero}px`
-    //    console.log("IS ON BACK 1200PX!!")
-    //}
-//
 });
 
+//***Functions for Light***///
 
 function checkScreen(){
     let scroll = window.pageYOffset
@@ -162,4 +138,22 @@ function timeLightingThree(){
             lampDark.style.top = `${calcul -650}px`;
             console.log('BACK ON LIGHT 1400px!');
         }
-} 
+}
+// 2500PX
+function timeLightingSuperLarge(){
+
+    let scroll = window.pageYOffset
+    let width = showcaseWidth.offsetWidth
+    let calcul = scroll - 300
+
+    if (scroll > 2400 & width > 2500) {
+        lampDark.style.top = `700px`
+        lightTime.style.transform = `block`;
+        lightTime.style.display = `block`;
+        console.log('LIGHT IS ON 2500px!');
+    } else {
+        lightTime.style.display = `none`;
+        lampDark.style.top = `${calcul -1550}px`;
+        console.log('BACK ON LIGHT 2500px!');
+    }
+}  
