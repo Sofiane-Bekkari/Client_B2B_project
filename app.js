@@ -1,6 +1,6 @@
 //*** Berger Menu ***//
 const berger = document.querySelector('.berger');
-const shadow = document.querySelector('.shadow');
+//const shadow = document.querySelector('.shadow');
 const navBar = document.querySelector('.nav-bar');
 
 // Event for berger menu
@@ -15,8 +15,7 @@ let lamp = document.querySelector('.light-lamp');
 const showcaseWidth = document.querySelector('.showcase');
 const lampDark = document.querySelector('.lamp-dark');
 const lightTime = document.querySelector('.spot-light');
-
-console.log(lightTime)
+const shadowLight = document.querySelector('img.lamp-shadow');
 
 
 // Event on Scroll
@@ -25,18 +24,14 @@ window.addEventListener('scroll', function(){
     let width = showcaseWidth.offsetWidth
   
     let calcul = scroll - 300
-    if (width < 900 ){
-        console.log('NOTHGIN TO DO!!')
-        return
-
-    }
+  
     // Scrolling the grey lamp
-    if (scroll > 50 & width > 900){
-        lamp.style.top = `${calcul - 200}px`;
+    if (scroll > 50 & width > 890){
+        lamp.style.top = `${calcul - 100}px`;
         console.log('First!', calcul,'Scroll=', scroll)
     } else {
-        lamp.style.top = `${calcul - 150}px`;
-        console.log('First!', calcul,'Scroll=', scroll)
+        //lamp.style.top = `-100px`;
+        console.log('First1!', calcul,'Scroll2=', scroll)
     }
     // Change to the dark lamp 
         
@@ -75,13 +70,13 @@ function checkScreen(){
     let width = showcaseWidth.offsetWidth
   
     let calcul = scroll - 300
-    if (scroll > 700 & width > 890 ) {
+    if (scroll > 600 & width > 890 ) {
         lamp.style.display = `none`; 
-        lampDark.style.top = `${calcul - 200}px`; 
+        lampDark.style.top = `600px`; 
         console.log('Disper Grey!')
     } else {
         lamp.style.display = `block`; 
-        lampDark.style.top = `-30px`
+       
         console.log('Grey Is Back!');
 }}
 
@@ -92,12 +87,14 @@ function timeLighting(){
       let calcul = scroll - 300
 
       if (scroll >= 1950 & width > 890) {
-        lampDark.style.top = `1100px`
+        lampDark.style.top = `1000px`
         lightTime.style.transform = `block`;
         lightTime.style.display = `block`;
+        shadowLight.style.display = `block`;
         console.log('LIGHT IS ON!');
     } else {
         lightTime.style.display = `none`;
+        shadowLight.style.display = `none`;
         lampDark.style.top = `${calcul -650}px`;
         console.log('BACK ON LIGHT!');
     }
@@ -112,12 +109,12 @@ function timeLightingTwo(){
 
     if (scroll >= 1800 & width > 1199) {
         lampDark.style.top = `1000px`
-        lightTime.style.transform = `block`;
         lightTime.style.display = `block`;
         console.log('LIGHT IS ON 1200px!');
     } else {
         lightTime.style.display = `none`;
         lampDark.style.top = `${calcul -650}px`;
+        shadowLight.style.display = `none`;
         console.log('BACK ON LIGHT 1200px!');
     }
 }
@@ -136,6 +133,7 @@ function timeLightingThree(){
         } else {
             lightTime.style.display = `none`;
             lampDark.style.top = `${calcul -650}px`;
+            shadowLight.style.display = `none`;
             console.log('BACK ON LIGHT 1400px!');
         }
 }
@@ -147,13 +145,15 @@ function timeLightingSuperLarge(){
     let calcul = scroll - 300
 
     if (scroll > 2400 & width > 2500) {
-        lampDark.style.top = `700px`
+        lampDark.style.top = `250px`
         lightTime.style.transform = `block`;
         lightTime.style.display = `block`;
+        shadowLight.style.display = `block`
         console.log('LIGHT IS ON 2500px!');
     } else {
         lightTime.style.display = `none`;
-        lampDark.style.top = `${calcul -1550}px`;
+        lampDark.style.top = `${calcul -1950}px`;
+        shadowLight.style.display = `none`;
         console.log('BACK ON LIGHT 2500px!');
     }
 }  

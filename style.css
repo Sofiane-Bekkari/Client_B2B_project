@@ -489,7 +489,7 @@ footer {
     /* lamp grey */
     .light-lamp {
       right: 100px;
-      top: -450px;
+      top: -400px;
     }
     /* lamp on */
     .lamp-on img {
@@ -589,8 +589,12 @@ footer {
         margin-bottom: 2rem;
     }
     /* Dark lamp */
+    .lamp-dark {
+        z-index: 9;
+    }
     img.lamp-dark {
-        top: -160px;
+    
+        top: -990px;
         right: 35px;
     }
     img.lamp-dark-2 {
@@ -633,16 +637,16 @@ footer {
     }
     .lamp-dark {
         top: -20px;
-        right: 60px;
+        right: 55px;
     }
 
     /* SHADOW */
     .lamp-shadow {
-        bottom: 1px;
-        right: -25px;
-        height: 35vh;
+        bottom: -30px;
+        width: 250px;
+        right: 10px;
+        height: 30vh;
     }
-
 }
 
 /* media query at 1200px */
@@ -739,7 +743,7 @@ footer {
         right: 162px;
     }
     .spot-light {
-        right: 98px;
+        right: 95px;
         top: 310px;
     }
     img.spot {
@@ -747,13 +751,13 @@ footer {
         width: 210px;
     }
     img.lamp-dark {
-        top: 10px;
+        top: -900px;
         right: 100px;
     }
     /* SHADOW */
     .lamp-shadow {
-        bottom: 1px;
-        right: -0px;
+        bottom: -50px;
+        right: 75px;
         height: 35vh;
     }
 }
@@ -830,8 +834,8 @@ footer {
         padding: 0;
         margin: 0;
     }
-     /* block pic */
-     .block-pic {
+    /* block pic */
+    .block-pic {
 
          margin-top: 3rem;
          width: 100%;
@@ -864,7 +868,7 @@ footer {
         right: 65px;
     }
     .spot-light {
-        right: 90px;
+        right: 95px;
         top: 290px;
     }
     img.spot {
@@ -873,16 +877,91 @@ footer {
 
     /* SHADOW */
     .lamp-shadow {
-        bottom: 40px;
-        right: 40px;
-        height: 35vh;
+        bottom: -40px;
+        width: 400px;
+        right: 10px;
+        height: 40vh;
     }
 }
 
 /***Media query ON Super large 2500px***/
 @media screen and (min-width: 2500px){
+
+    #logo .logo {
+        font-size: 3rem;
+        width: 300px;
+    }
+    .berger {
+        font-size: 2rem;
+    }
+    li.item a{
+        font-size: 3rem;
+    }
+    img.lamp-grey {
+        width: 100px;
+    }
+    .light-lamp {
+        top: -500px
+    }
+  
    .container.hero {
-       border: solid rebeccapurple;
        height: 65vh;
-   }
+    }
+    .main-text h1 {
+       font-size: 3rem;
+    }
+    .main-text h3 {
+       font-size: 2rem;
+    }
+   .main-text p {
+       font-size: 1.2rem;
+    }
+   .desk {
+       width: 750px;
+    }
+   .btn-read {
+       font-size: 1.3rem;
+       padding: .5rem;
+    }
+    .light-text h1 {
+     font-size: 3rem;
+    }
+    .light-text h3 {
+        font-size: 2rem;
+    }
+    .light-text p {
+        font-size: 1.2rem;
+    }
+    .block-pic .table {
+       width: 350px;
+    }
+    img.telephone {
+        width: 230px;
+    }
+    img.cameleon {
+        width: 200px;
+        margin-left: 18rem;
+    }
+
+    img.lamp-dark {
+        top: 0px;
+        width: 110px;
+        right: 85px;
+    }
+    .spot-light {
+        right: 45px;
+        top: 400px;
+    }
+    img.spot {
+        width: 330px;
+        height: 65vh;
+    }
+
+    /* SHADOW */
+    .lamp-shadow {
+        bottom: -45px;
+        width: 400px;
+        right: 10px;
+        height: 40vh;
+    }
 }
