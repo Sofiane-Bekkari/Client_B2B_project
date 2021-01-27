@@ -60,6 +60,7 @@ window.addEventListener('scroll', function(){
     if (width > 2500){
         timeLightingSuperLarge();
     }
+    console.log(width)
 
 });
 
@@ -125,8 +126,8 @@ function timeLightingThree(){
         let width = showcaseWidth.offsetWidth
         let calcul = scroll - 300
     
-        if (scroll >= 1850 & width > 1399) {
-            lampDark.style.top = `1000px`
+        if (scroll >= 1850 & width >= 1400) {
+            lampDark.style.top = `970px`
             lightTime.style.transform = `block`;
             lightTime.style.display = `block`;
             console.log('LIGHT IS ON 1400px!');
