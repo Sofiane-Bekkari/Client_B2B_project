@@ -520,13 +520,13 @@ footer {
         justify-content: center;
         align-items: flex-end;
         width: 90%;
-        height: 55vh;
+        height: 60vh;
     }
     .main-text {
         width: 100%;
         padding-left: 2rem ;
         text-align: left;
-        margin-bottom: 5rem;
+        margin-bottom: 8rem;
     }
     .main-text h1 {
         font-size: 2rem;
@@ -676,7 +676,7 @@ footer {
         right: 135px;
     }
     .main-text {
-        height: 50vh;
+        height: 40vh;
         padding: 0;
     }
     .main-text h1 {
@@ -778,11 +778,24 @@ footer {
       height: 80vh;
     }
     .main-text {
-      margin-bottom: 8rem;
+      margin-bottom: 12rem;
+    }
+    .main-text h1 {
+        font-size: 3rem;
+    }
+    .main-text h3 {
+        font-size: 2rem;
+    }
+    .main-text p {
+        font-size: 1.1rem;
     }
     img.desk {
         width: 700px;
         margin-bottom: 4rem;
+    }
+    .btn-read a{
+        font-size: .9rem;
+        padding: .8rem;
     }
     /*DARK SECTION*/
     .dark-section {
@@ -802,6 +815,15 @@ footer {
         width: 280px;
         padding-top: 1rem ;
         margin: 0 auto;
+    }
+    .light-text h1 {
+        font-size: 2.5rem;
+    }
+    .light-text h3 {
+        font-size: 1.5rem;
+    }
+    .light-text p {
+        font-size: 1.2rem;
     }
     img.table {
         margin-top: 3rem;
