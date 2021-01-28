@@ -58,6 +58,7 @@ window.addEventListener('scroll', function(){
     }
     // 2500px
     if (width > 2500){
+        lamp.style.top = `${calcul -300}px`;
         timeLightingSuperLarge();
     }
     console.log(width)
@@ -145,7 +146,7 @@ function timeLightingSuperLarge(){
     let width = showcaseWidth.offsetWidth
     let calcul = scroll - 300
 
-    if (scroll > 2400 & width > 2500) {
+    if (scroll > 2400 & width > 2500) { 
         lampDark.style.top = `250px`
         lightTime.style.transform = `block`;
         lightTime.style.display = `block`;

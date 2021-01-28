@@ -911,51 +911,69 @@ footer {
 
 /***Media query ON Super large 2500px***/
 @media screen and (min-width: 2500px){
-
+    .head-logo {
+        width: 73%;
+    }
     #logo .logo {
         font-size: 3rem;
-        width: 300px;
+        width: 350px;
     }
     .berger {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
     li.item a{
         font-size: 3rem;
     }
     img.lamp-grey {
-        width: 100px;
+        width: 130px;
+        right: 115px;
     }
     .light-lamp {
-        top: -500px
+        top: -600px;
+        right: 240px;
     }
   
    .container.hero {
        height: 65vh;
+       width: 70%;
+       position: relative;
+    }
+    .main-text {
+        height: 35vh;
     }
     .main-text h1 {
-       font-size: 3rem;
+       font-size: 4rem;
     }
     .main-text h3 {
-       font-size: 2rem;
+       font-size: 2.5rem;
     }
    .main-text p {
-       font-size: 1.2rem;
+       font-size: 1.6rem;
+       line-height: 2rem;
     }
-   .desk {
-       width: 750px;
+    img.desk {
+       position: absolute;
+       width: 950px;
+       top: 380px;
+       right: -30px;
+       margin: 0;
+       padding: 0;
     }
-   .btn-read {
-       font-size: 1.3rem;
-       padding: .5rem;
+   .btn-read a {
+       font-size: 1.4rem;
+       padding: .9rem;
+    }
+    .container.all {
+        width: 70%;
     }
     .light-text h1 {
-     font-size: 3rem;
+     font-size: 3.5rem;
     }
     .light-text h3 {
-        font-size: 2rem;
+        font-size: 2.3rem;
     }
     .light-text p {
-        font-size: 1.2rem;
+        font-size: 1.6rem;
     }
     .block-pic .table {
        width: 350px;
@@ -969,24 +987,27 @@ footer {
     }
 
     img.lamp-dark {
-        top: 0px;
-        width: 110px;
-        right: 85px;
+        top: -400px;
+        width: 135px;
+        right: 150px;
     }
     .spot-light {
-        right: 45px;
+        right: 115px;
         top: 400px;
     }
     img.spot {
-        width: 330px;
+        width: 350px;
         height: 65vh;
     }
 
     /* SHADOW */
     .lamp-shadow {
         bottom: -45px;
-        width: 400px;
-        right: 10px;
+        width: 450px;
+        right: 70px;
         height: 40vh;
+    }
+    .footer-content {
+        font-size: 2.5rem;
     }
 }
