@@ -119,7 +119,7 @@ function timeLightingTwo(){
         console.log('BACK ON LIGHT 1200px!');
     }
 }
-/// 1400px 
+/// 1400px
 function timeLightingThree(){
 
         let scroll = window.pageYOffset

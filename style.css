@@ -499,7 +499,7 @@ footer {
         z-index: 2;
     }
     nav {
-        height: 70vh;
+        height: 100vh;
     }
     .nav-bar {
         margin-top: 1.5rem;
@@ -676,7 +676,7 @@ footer {
         right: 135px;
     }
     .main-text {
-        margin-bottom: 6rem;
+        height: 50vh;
         padding: 0;
     }
     .main-text h1 {
@@ -696,7 +696,7 @@ footer {
        margin: 0;
     }
     .desk {
-        width: 600px;
+        width: 650px;
         margin-bottom: 2rem;
     }
     /*DARK SECTION*/
@@ -779,7 +779,10 @@ footer {
     }
     .main-text {
       margin-bottom: 8rem;
-
+    }
+    img.desk {
+        width: 700px;
+        margin-bottom: 4rem;
     }
     /*DARK SECTION*/
     .dark-section {
@@ -824,7 +827,7 @@ footer {
     }
 
     .container.hero {
-        height: 80vh;
+        height: 85vh;
     }
     .dark-section {
         height: 100vh;
