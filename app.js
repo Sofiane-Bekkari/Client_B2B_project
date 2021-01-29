@@ -1,6 +1,6 @@
 //*** Berger Menu ***//
 const berger = document.querySelector('.berger');
-const shadow = document.querySelector('.shadow');
+//const shadow = document.querySelector('.shadow');
 const navBar = document.querySelector('.nav-bar');
 
 // Event for berger menu
@@ -10,8 +10,12 @@ berger.addEventListener('click', function(){
 
 
 ///**** lamp light ****/// 
+
 let lamp = document.querySelector('.light-lamp');
 const showcaseWidth = document.querySelector('.showcase');
+const lampDark = document.querySelector('.lamp-dark');
+const lightTime = document.querySelector('.spot-light');
+const shadowLight = document.querySelector('img.lamp-shadow');
 
 
 // Event on Scroll
@@ -19,40 +23,139 @@ window.addEventListener('scroll', function(){
     let scroll = window.pageYOffset
     let width = showcaseWidth.offsetWidth
   
-    calcul = scroll - 300
-    let topBackZero = -400
+    let calcul = scroll - 300
   
-    if (scroll > 50 & width < 900){
-        lamp.style.top = `${calcul}px`;
-
-    } else if (scroll < 100 & width < 900) {
-        lamp.style.top = `${topBackZero}px`; 
-
+    // Scrolling the grey lamp
+    if (scroll > 50 & width > 890){
+        lamp.style.top = `${calcul - 100}px`;
+        console.log('First!', calcul,'Scroll=', scroll)
+    } else {
+        //lamp.style.top = `-100px`;
+        console.log('First1!', calcul,'Scroll2=', scroll)
     }
-    // if it greater then 300
-    if (scroll > 300 & width < 900 ) {
-        lamp.style.top = `-10px`; 
-    }
-
-    // Check if it on more then 900PX
-    if  (scroll > 100 & width > 900) {
-        lamp.style.top = `${calcul}px`;
-        console.log('yes is greater on 900PX')
+    // Change to the dark lamp 
         
+
+    // Cheching not true  <900>
+    if (width > 900){
+        checkScreen();
     }
-    // IF it more 350 scroll it back
-    if (scroll > 320 & width < 1200 ) {
-        lamp.style.top = `${topBackZero}px`; 
-        console.log('Do this!')
+
+    // Cheching if time to lighting            
+    if (width > 900){
+        timeLighting();
+
     }
-    if (scroll > 300 & width > 1200){
-        lamp.style.top = `${topBackZero}px`
-        //lamp.style.tranform = `opacity 0.9`
-        console.log("IS ON 1200PX!!")
+
+    // Cheching light on 1200px 
+    if (width > 1200){
+        timeLightingTwo();
     }
-    if (scroll < 100 & width > 1200){
-        lamp.style.top = `${topBackZero}px`
-        console.log("IS ON BACK 1200PX!!")
+
+    // Cheching light on 1400px 
+    if (width > 1400){
+        timeLightingThree();
     }
+    // 2500px
+    if (width > 2500){
+        lamp.style.top = `${calcul -300}px`;
+        timeLightingSuperLarge();
+    }
+    console.log(width)
 
 });
+
+//***Functions for Light***///
+
+function checkScreen(){
+    let scroll = window.pageYOffset
+    let width = showcaseWidth.offsetWidth
+  
+    let calcul = scroll - 300
+    if (scroll > 600 & width > 890 ) {
+        lamp.style.display = `none`; 
+        lampDark.style.top = `600px`; 
+        console.log('Disper Grey!')
+    } else {
+        lamp.style.display = `block`; 
+       
+        console.log('Grey Is Back!');
+}}
+
+function timeLighting(){
+      // ON the light in right time
+      let scroll = window.pageYOffset
+      let width = showcaseWidth.offsetWidth
+      let calcul = scroll - 300
+
+      if (scroll >= 1950 & width > 890) {
+        lampDark.style.top = `1000px`
+        lightTime.style.transform = `block`;
+        lightTime.style.display = `block`;
+        shadowLight.style.display = `block`;
+        console.log('LIGHT IS ON!');
+    } else {
+        lightTime.style.display = `none`;
+        shadowLight.style.display = `none`;
+        lampDark.style.top = `${calcul -650}px`;
+        console.log('BACK ON LIGHT!');
+    }
+}
+
+/// 1200PX
+function timeLightingTwo(){
+
+    let scroll = window.pageYOffset
+    let width = showcaseWidth.offsetWidth
+    let calcul = scroll - 300
+
+    if (scroll >= 1800 & width > 1199) {
+        lampDark.style.top = `1000px`
+        lightTime.style.display = `block`;
+        console.log('LIGHT IS ON 1200px!');
+    } else {
+        lightTime.style.display = `none`;
+        lampDark.style.top = `${calcul -650}px`;
+        shadowLight.style.display = `none`;
+        console.log('BACK ON LIGHT 1200px!');
+    }
+}
+/// 1400px
+function timeLightingThree(){
+
+        let scroll = window.pageYOffset
+        let width = showcaseWidth.offsetWidth
+        let calcul = scroll - 300
+    
+        if (scroll >= 1850 & width >= 1400) {
+            lampDark.style.top = `970px`
+            lightTime.style.transform = `block`;
+            lightTime.style.display = `block`;
+            console.log('LIGHT IS ON 1400px!');
+        } else {
+            lightTime.style.display = `none`;
+            lampDark.style.top = `${calcul -650}px`;
+            shadowLight.style.display = `none`;
+            console.log('BACK ON LIGHT 1400px!');
+        }
+}
+// 2500PX
+function timeLightingSuperLarge(){
+
+    let scroll = window.pageYOffset
+    let width = showcaseWidth.offsetWidth
+    let calcul = scroll - 300
+
+    if (scroll > 2400 & width > 2500) { 
+        lampDark.style.top = `250px`
+        lightTime.style.transform = `block`;
+        lightTime.style.display = `block`;
+        shadowLight.style.display = `block`
+        console.log('LIGHT IS ON 2500px!');
+    } else {
+        lightTime.style.display = `none`;
+        lampDark.style.top = `${calcul -1950}px`;
+        shadowLight.style.display = `none`;
+        console.log('BACK ON LIGHT 2500px!');
+    }
+}  
