@@ -61,7 +61,8 @@ window.addEventListener('scroll', function(){
         lamp.style.top = `${calcul -300}px`;
         timeLightingSuperLarge();
     }
-    console.log(width)
+    console.log(scroll, width)
+
 
 });
 
