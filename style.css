@@ -253,6 +253,12 @@ img.cameleon {
     margin-left: 2rem;
     margin-bottom: 2rem;
 }
+.block-pic.cameleon {
+    display: grid;
+    place-items: end;
+    height: 15vh;
+
+}
 /* Dark lamp */
 .lamp-dark {
     position: absolute;
@@ -362,6 +368,50 @@ img.lamp-shadow {
 img.spot {
     height: 52vh;
     width: 200px;
+}
+
+/* Yellow Section */
+.yellow-section {
+    background:
+        url(/images/bng-yellow1.png) no-repeat center;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+}
+.yellow {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+}
+.text-yellow {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    padding: 0 2rem;
+    text-align: center;
+}
+.text-yellow h1 {
+    color: #009EE0;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+.text-yellow h3 {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+.yellow-section .block-pic.cameleon {
+    margin: 1rem 1rem 0 0;
+}
+.yellow img.cameleon {
+    -webkit-box-reflect: below -8px linear-gradient(transparent,#0004);
+}
+
+.lamp-yellow {
+    position: absolute;
+    width: 80px;
+    top: 0px;
+    right: 25px;
 }
 
 /** KEYFRAMES /SHADOW/ /SPOT/ /light/ **/
@@ -646,6 +696,27 @@ footer {
         width: 250px;
         right: 10px;
         height: 30vh;
+    }
+    /* Yellow Section */
+    .yellow {
+        align-items: flex-end;
+        height: 20vh;
+    }
+    .yellow-section .block-pic.cameleon {
+        padding:0;
+        margin: 0 0 4rem 0 ;
+    }
+    .yellow-section img.telephone {
+        width: 150px;
+    }
+    .text-yellow {
+        text-align: left;
+        width: 70%;
+        left: 15%;
+        top: 30%;
+    }
+    .yellow-section img.lamp-yellow {
+        top: -190px;
     }
 }
 
@@ -987,7 +1058,7 @@ footer {
     }
 
     img.lamp-dark {
-        top: -400px;
+        top: -460px;
         width: 135px;
         right: 150px;
     }
@@ -1002,7 +1073,7 @@ footer {
 
     /* SHADOW */
     .lamp-shadow {
-        bottom: -45px;
+        bottom: -55px;
         width: 450px;
         right: 70px;
         height: 40vh;
