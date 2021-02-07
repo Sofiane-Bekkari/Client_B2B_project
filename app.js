@@ -128,7 +128,7 @@ function timeLightingThree(){
         let calcul = scroll - 300
     
         if (scroll >= 1850 & width >= 1400) {
-            lampDark.style.top = `970px`
+            lampDark.style.top = `1000px`
             lightTime.style.transform = `block`;
             lightTime.style.display = `block`;
             console.log('LIGHT IS ON 1400px!');

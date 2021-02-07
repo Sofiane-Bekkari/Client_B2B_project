@@ -845,7 +845,7 @@ footer {
 @media screen and (min-width: 1400px) {
 
     .head-logo {
-        width: 1240px;
+        width: 1250px;
     }
     /* showcase */
     .showcase {
@@ -987,10 +987,10 @@ footer {
         height: 40vh;
     }
 
-     /* Yellow Section */
-     .yellow-section {
-         margin: 0 auto;
-     }
+    /* Yellow Section */
+    .yellow-section {
+        margin: 0 auto;
+    }
      .yellow-section .container.all {
         margin: 0 auto;
         height: 80vh;
@@ -1097,6 +1097,28 @@ footer {
         width: 450px;
         right: 70px;
         height: 40vh;
+    }
+
+    .yellow-section {
+        background-size: cover;
+    }
+    .yellow-section img.lamp-yellow {
+        top: -260px;
+    }
+    .text-yellow h1 {
+        font-size: 3.5rem;
+    }
+    .text-yellow h3 {
+        font-size: 2.5rem;
+    }
+    .yellow-section .block-pic img {
+       width: 250px;
+    }
+    .text-yellow p {
+        font-size: 1.6rem;
+    }
+    .lamp-yellow {
+        width: 120px;
     }
     .footer-content {
         font-size: 2.5rem;
