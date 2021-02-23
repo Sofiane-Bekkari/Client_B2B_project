@@ -144,6 +144,10 @@ img.lamp-grey {
 .main-text {
     padding-top: 3rem;
 }
+.text-1 {
+    transition: all 1s ease-in;
+}
+
 .main-text h1 {
     letter-spacing: 2px;
     font-size: 1.8rem;
@@ -268,13 +272,16 @@ img.cameleon {
     z-index: 0;
     transition: all .5s ease-in, transform 1s ease-in-out;
 }
-img.lamp-dark{
-    display: block;
-    top: -800px;
+img.lamp-dark-1{
+    position: absolute;
+    top: 100px;
+    right: 0;
     width: 80px;
+    display: none;
 }
 img.lamp-dark-2 {
     width: 80px;
+    border: solid yellow;
     position: absolute;
     z-index: 0;
     top: -10px;
@@ -414,6 +421,16 @@ img.spot {
     right: 25px;
 }
 
+/* Blue Section */
+.blue-section {
+    position: absolute;
+    background: url(./images/bgn-showcase-1.png) no-repeat center center;
+    border: solid rebeccapurple;
+    width: 100%;
+    height: 100vh;
+    top: 0px;
+}
+
 /** KEYFRAMES /SHADOW/ /SPOT/ /light/ **/
 @keyframes shadow {
     0%{
@@ -549,7 +566,7 @@ footer {
         z-index: 2;
     }
     nav {
-        height: 100vh;
+        height: 110vh;
     }
     .nav-bar {
         margin-top: 1.5rem;
@@ -603,6 +620,22 @@ footer {
     /* block pic */
     .dark {
         height: 80vh;
+    }
+    img.lamp-dark-2 {
+        position: absolute;
+        top: 500px;
+
+    }
+    .lamp-dark-11 {
+        top: -920px;
+        position: relative;
+    }
+    img.lamp-dark-1{
+        display: block;
+        position: absolute;
+        top: 0px;
+        right: 100px;
+        width: 80px;
     }
     .light-text h1 {
         font-size: 1.7rem;
@@ -678,12 +711,13 @@ footer {
         right: 112px;
     }
     .spot-light {
-        right: 37px;
-        top: 240px;
+     
+        right: 20px;
+        top: 150px;
     }
     img.spot {
-        height: 55vh;
-        width: 200px;
+        height: 65vh;
+        width: 250px;
     }
     .lamp-dark {
         top: -20px;
@@ -693,8 +727,8 @@ footer {
     /* SHADOW */
     .lamp-shadow {
         bottom: -30px;
-        width: 250px;
-        right: 10px;
+        width: 320px;
+        right: -15px;
         height: 30vh;
     }
     /* Yellow Section */
@@ -716,7 +750,8 @@ footer {
         top: 30%;
     }
     .yellow-section img.lamp-yellow {
-        top: -190px;
+        top: -185px;
+        right: 70px;
     }
 }
 

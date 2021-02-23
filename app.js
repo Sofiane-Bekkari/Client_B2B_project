@@ -13,10 +13,15 @@ berger.addEventListener('click', function(){
 
 let lamp = document.querySelector('.light-lamp');
 const showcaseWidth = document.querySelector('.showcase');
-const lampDark = document.querySelector('.lamp-dark');
+const lampDark = document.querySelector('.lamp-dark-1');
+console.log(lampDark, 'HERE§§')
 const lightTime = document.querySelector('.spot-light');
 const shadowLight = document.querySelector('img.lamp-shadow');
 
+//**** Main Text Hide ****//
+const mainText = document.getElementById('hide-right');
+
+console.log(mainText);
 
 // Event on Scroll
 window.addEventListener('scroll', function(){
@@ -24,14 +29,20 @@ window.addEventListener('scroll', function(){
     let width = showcaseWidth.offsetWidth
   
     let calcul = scroll - 300
+    // hide text
+    if (scroll > 100){
+        mainText.style.transform = "translate(-900px)"
+    }
+    else if (scroll < 100){
+        mainText.style.transform = "translate(0px)"
+    }
   
     // Scrolling the grey lamp
     if (scroll > 50 & width > 890){
         lamp.style.top = `${calcul - 100}px`;
-        console.log('First!', calcul,'Scroll=', scroll)
     } else {
         //lamp.style.top = `-100px`;
-        console.log('First1!', calcul,'Scroll2=', scroll)
+        //console.log('First1!', calcul,'Scroll2=', scroll)
     }
     // Change to the dark lamp 
         
@@ -66,34 +77,32 @@ window.addEventListener('scroll', function(){
 });
 
 //***Functions for Light***///
-
 function checkScreen(){
     let scroll = window.pageYOffset
     let width = showcaseWidth.offsetWidth
   
-    let calcul = scroll - 300
-    if (scroll > 600 & width > 890 ) {
+    let calcul = scroll - 500
+    if (scroll > 650 & width > 890 ) {
         lamp.style.display = `none`; 
-        lampDark.style.top = `600px`; 
+        lampDark.style.top =  `900px`; 
         console.log('Disper Grey!')
     } else {
         lamp.style.display = `block`; 
-       
         console.log('Grey Is Back!');
 }}
 
 function timeLighting(){
-      // ON the light in right time
-      let scroll = window.pageYOffset
-      let width = showcaseWidth.offsetWidth
-      let calcul = scroll - 300
+    // ON the light in right time
+    let scroll = window.pageYOffset
+    let width = showcaseWidth.offsetWidth
+    let calcul = scroll - 300
 
-      if (scroll >= 1950 & width > 890) {
-        lampDark.style.top = `1000px`
-        lightTime.style.transform = `block`;
-        lightTime.style.display = `block`;
-        shadowLight.style.display = `block`;
-        console.log('LIGHT IS ON!');
+    if (scroll >= 900 ) { 
+      lampDark.style.top = `20px`;
+      lightTime.style.transform = `block`;
+      lightTime.style.display = `block`;
+      shadowLight.style.display = `block`;
+      console.log('LIGHT IS ON!');
     } else {
         lightTime.style.display = `none`;
         shadowLight.style.display = `none`;
@@ -120,6 +129,7 @@ function timeLightingTwo(){
         console.log('BACK ON LIGHT 1200px!');
     }
 }
+
 /// 1400px
 function timeLightingThree(){
 
@@ -159,3 +169,5 @@ function timeLightingSuperLarge(){
         console.log('BACK ON LIGHT 2500px!');
     }
 }  
+
+
