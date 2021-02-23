@@ -118,10 +118,12 @@ function timeLightingTwo(){
     let width = showcaseWidth.offsetWidth
     let calcul = scroll - 300
 
-    if (scroll >= 1800 & width > 1199) {
-        lampDark.style.top = `1000px`
+    if (scroll >= 900 & width > 1199) {
+        lampDark.style.top = `40px`
         lightTime.style.display = `block`;
+        lampDark.style.display = `block`;
         console.log('LIGHT IS ON 1200px!');
+        console.log('scroll is:', scroll)
     } else {
         lightTime.style.display = `none`;
         lampDark.style.top = `${calcul -650}px`;
@@ -137,8 +139,8 @@ function timeLightingThree(){
         let width = showcaseWidth.offsetWidth
         let calcul = scroll - 300
     
-        if (scroll >= 1850 & width >= 1400) {
-            lampDark.style.top = `1000px`
+        if (scroll >= 900 & width > 1300) {
+            lampDark.style.top = `20px`
             lightTime.style.transform = `block`;
             lightTime.style.display = `block`;
             console.log('LIGHT IS ON 1400px!');
