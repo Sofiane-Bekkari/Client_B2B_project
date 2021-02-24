@@ -1071,8 +1071,9 @@ footer {
     li.item a{
         font-size: 3rem;
     }
-    img.lamp-grey {
-        width: 130px;
+    img#lamp-grey.lamp-grey {
+        width: 120px;
+        display: block;
         right: 115px;
     }
     .light-lamp {
@@ -1123,52 +1124,55 @@ footer {
         font-size: 1.6rem;
     }
     .block-pic .table {
-       width: 350px;
+       width: 450px;
     }
-    img.telephone {
-        width: 230px;
+    .block-pic img.telephone {
+        width: 300px;
+        margin-bottom: 3.5rem;
     }
-    img.cameleon {
-        width: 200px;
+    .block-pic img.cameleon {
+        width: 250px;
         margin-left: 18rem;
     }
 
-    img.lamp-dark {
-        top: -460px;
+    img.lamp-dark-1 {
+        top: 560px;
         width: 135px;
         right: 150px;
     }
+    .lamp-dark-11 {
+        top: -1450px;
+    }
     .spot-light {
-        right: 115px;
+        right: 60px;
         top: 400px;
     }
     img.spot {
-        width: 350px;
+        width: 450px;
         height: 65vh;
     }
 
     /* SHADOW */
     .lamp-shadow {
         bottom: -55px;
-        width: 450px;
-        right: 70px;
+        width: 550px;
+        right: 30px;
         height: 40vh;
     }
 
     .yellow-section {
         background-size: cover;
+        border: solid rebeccapurple;
     }
     .yellow-section img.lamp-yellow {
         top: -260px;
+        width: 130px;
     }
     .text-yellow h1 {
         font-size: 3.5rem;
     }
     .text-yellow h3 {
         font-size: 2.5rem;
-    }
-    .yellow-section .block-pic img {
-       width: 250px;
     }
     .text-yellow p {
         font-size: 1.6rem;
@@ -1179,4 +1183,116 @@ footer {
     .footer-content {
         font-size: 2.5rem;
     }
+}
+
+/** media at 2880x1880 **/
+@media screen and (min-width: 2880px){
+
+    /* NAVBAR A SIZE */
+    li.item a {
+        font-size: 4rem;
+    }
+   .container.hero {
+       display: flex;
+       margin-top: 20rem;
+       align-items: flex-end;
+       justify-content: flex-end;
+   }
+   .main-text {
+       margin-bottom: 22rem;
+   }
+
+   .main-text h1 {
+       font-size: 5rem;
+   }
+   .main-text h3 {
+       font-size: 3.5rem;
+   }
+   .main-text p {
+       font-size: 2.1rem;
+       line-height: 2.5rem;
+   }
+   /* LAMP BLUE */
+    img.lamp-dark-1 {
+    top: 560px;
+    width: 170px;
+    right: 150px;
+    }
+    .light-lamp {
+        top: 150px;
+        position: relative;
+    }
+    img#lamp-grey.lamp-grey {
+        width: 150px;
+        position: absolute;
+        display: block;
+        top: -1350px;
+        right: -15px;
+
+    }
+    .lamp-dark-11 {
+        top: -2400px;
+    }
+    .spot-light {
+        top: 470px;
+        right: -20px;
+    }
+    img.spot {
+        width: 650px;
+        height: 65vh;
+    }
+
+    /* SHADOW */
+    .lamp-shadow {
+        bottom: -40px;
+        width: 750px;
+        right: -50px;
+        height: 40vh;
+    }
+    .block-pic .table {
+        width: 600px;
+    }
+    .block-pic img.cameleon {
+        width: 310px;
+        margin-bottom: 3rem;
+    }
+    .block-pic img.telephone {
+        width: 350px;
+    }
+    .light-text {
+        margin-top: 30rem;
+    }
+    .light-text h1 {
+        font-size: 5rem;
+    }
+    .light-text h3 {
+        font-size: 3rem;
+    }
+    .light-text p {
+        font-size: 2.5rem;
+    }
+    .yellow-section img.lamp-yellow {
+        width: 160px;
+        top: -360px;
+    }
+    .text-yellow h1 {
+        font-size: 5rem;
+    }
+    .text-yellow h3 {
+        font-size: 3.5rem;
+    }
+    .text-yellow p {
+        font-size: 2.5rem;
+    }
+
+    .btn-read a{
+        font-size: 2rem;
+    }
+    .yellow-section .block-pic {
+        margin-bottom: 8rem;
+    }
+    .yellow-section img.cameleon {
+        margin-bottom: 8rem;
+    }
+
 }

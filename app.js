@@ -21,7 +21,6 @@ const shadowLight = document.querySelector('img.lamp-shadow');
 //**** Main Text Hide ****//
 const mainText = document.getElementById('hide-right');
 
-console.log(mainText);
 
 // Event on Scroll
 window.addEventListener('scroll', function(){
@@ -31,7 +30,7 @@ window.addEventListener('scroll', function(){
     let calcul = scroll - 300
     // hide text
     if (scroll > 100){
-        mainText.style.transform = "translate(-900px)"
+        mainText.style.transform = "translate(-1500px)"
     }
     else if (scroll < 100){
         mainText.style.transform = "translate(0px)"
@@ -70,11 +69,20 @@ window.addEventListener('scroll', function(){
     // 2500px
     if (width > 2500){
         lamp.style.top = `${calcul -300}px`;
+        checkScreen2();
         timeLightingSuperLarge();
     }
+    // 2880PX
+    if (width > 2800){
+        lamp.style.top = `${calcul -300}px`;
+        checkScreen3();
+        timeLightingSuperLargeX();
+    }
+
     console.log(width)
 
 });
+
 
 //***Functions for Light***///
 function checkScreen(){
@@ -84,11 +92,39 @@ function checkScreen(){
     let calcul = scroll - 500
     if (scroll > 650 & width > 890 ) {
         lamp.style.display = `none`; 
-        lampDark.style.top =  `900px`; 
+        lampDark.style.top =  `90px`; 
         console.log('Disper Grey!')
     } else {
         lamp.style.display = `block`; 
         console.log('Grey Is Back!');
+}}
+//**checking on 2500px **//
+function checkScreen2(){
+    let scroll = window.pageYOffset
+    let width = showcaseWidth.offsetWidth
+  
+    let calcul = scroll - 500
+    if (scroll > 850 & width > 2400 ) {
+        lamp.style.display = `none`; 
+        lampDark.style.top =  `700px`; 
+        console.log('Disper Grey22!')
+    } else {
+        lamp.style.display = `block`; 
+        console.log('Grey Is Back22!');
+}}
+//**checking on 2880/1880px **//
+function checkScreen3(){
+    let scroll = window.pageYOffset
+    let width = showcaseWidth.offsetWidth
+  
+    let calcul = scroll - 500
+    if (scroll > 1150 & width > 2800 ) {
+        lamp.style.display = `none`; 
+        lampDark.style.top =  `700px`; 
+        console.log('Disper Grey33!')
+    } else {
+        lamp.style.display = `block`; 
+        console.log('Grey Is Back33!');
 }}
 
 function timeLighting(){
@@ -158,17 +194,39 @@ function timeLightingSuperLarge(){
     let width = showcaseWidth.offsetWidth
     let calcul = scroll - 300
 
-    if (scroll > 2400 & width > 2500) { 
-        lampDark.style.top = `250px`
+    if (scroll >= 1230 & width > 2500) { 
+        lampDark.style.top = `80px`
         lightTime.style.transform = `block`;
         lightTime.style.display = `block`;
         shadowLight.style.display = `block`
         console.log('LIGHT IS ON 2500px!');
     } else {
         lightTime.style.display = `none`;
-        lampDark.style.top = `${calcul -1950}px`;
+        lampDark.style.top = `${calcul -950}px`;
         shadowLight.style.display = `none`;
         console.log('BACK ON LIGHT 2500px!');
+    }
+}  
+
+// 2880PX
+function timeLightingSuperLargeX(){
+
+    let scroll = window.pageYOffset
+    let width = showcaseWidth.offsetWidth
+    let calcul = scroll - 300
+
+    if (scroll >= 1700 & width > 2800) { 
+        lampDark.style.top = `500px`
+        console.log(scroll)
+        lightTime.style.transform = `block`;
+        lightTime.style.display = `block`;
+        shadowLight.style.display = `block`
+        console.log('LIGHT IS ON 2800px!');
+    } else {
+        lightTime.style.display = `none`;
+        lampDark.style.top = `${calcul -950}px`;
+        shadowLight.style.display = `none`;
+        console.log('BACK ON LIGHT 2800px!');
     }
 }  
 
