@@ -1168,6 +1168,9 @@ footer {
         top: -260px;
         width: 130px;
     }
+    .yellow-section img.cameleon , img.telephone {
+        margin-bottom: 5rem;
+    }
     .text-yellow h1 {
         font-size: 3.5rem;
     }
