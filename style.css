@@ -941,7 +941,7 @@ footer {
     }
     /* dark pics */
     .block-pic .table {
-        width: 280px;
+        width: 290px;
         padding-top: 1rem ;
         margin: 0 auto;
     }
@@ -954,15 +954,24 @@ footer {
     .light-text p {
         font-size: 1.2rem;
     }
+    .text-yellow h1 {
+        font-size: 2.5rem;
+    }
+    .text-yellow h3 {
+        font-size: 1.5rem;
+    }
+    .text-yellow p {
+        font-size: 1.2rem;
+    }
     img.table {
         margin-top: 3rem;
         height: 33vh;
     }
-    img.telephone {
-        width: 130px;
+    .block-pic img.telephone {
+        width: 180px;
     }
     img.cameleon {
-        width: 120px;
+        width: 150px;
         margin-left: 18rem;
     }
 }
@@ -1003,11 +1012,7 @@ footer {
         margin-top: 3rem;
         height: 33vh;
     }
-    img.telephone {
-        width: 150px;
-    }
     img.cameleon {
-        width: 120px;
         margin-left: 18rem;
     }
     .light-text {
@@ -1022,11 +1027,12 @@ footer {
         right: 65px;
     }
     .spot-light {
-        right: 95px;
-        top: 290px;
+        right: 30px;
+        top: 280px;
     }
     img.spot {
         height: 65vh;
+        width: 350px;
     }
 
     /* SHADOW */
